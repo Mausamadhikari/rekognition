@@ -24,7 +24,7 @@ things to consider you must have configured /.aws/credentials to run this
 
 3. Output Frontened
 
-<img src=""/>
+<img src="https://github.com/Mausamadhikari/rekognition/blob/main/analyze.png"/>
 
 -------------------------------------------------------------------------------------------------
 
