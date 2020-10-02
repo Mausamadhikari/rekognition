@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Analysis</title>
-<html>
-<head>
-   <title>Face Analysis</title>
-   <meta charset="utf-8">
 
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+   <meta charset="UTF-8">
+   <title>Analysis</title>
+   <html>
 
-</head>
+   <head>
+      <title>Face Analysis</title>
+      <meta charset="utf-8">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   </head>
+
+   <style>
+      body {
+
+         background-image: linear-gradient(to right, #007991, #78ffd6);
+         padding: 90px;
+      }
+
+      .text_title {
+         color: #e0f7fa;
+         text-align: center;
+         font-family: "Times New Roman", Times, serif;
+
+      }
+
+      .row {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+      }
+   </style>
+
 <body>
    <div class="container" id=''>
-      <div class="row" id='title_info'>
-         <h1 id="text_title">Amazon Rekognition</h1>
-      </div>
 
-      <div >
-         <div>
-           <img id='photo_margin' width = "370" height="350"  src="{{attributes.image_names}}">
+      <h1 class="text_title">Amazon Rekognition</h1>
+
+
+      <div class="row">
+         <div style="margin-top:2%">
+            <img id='photo_margin' width="370" height="350" src="{{attributes.image_names}}">
          </div>
 
 
-          <div>
-              <p>Celebrity: {{attributes.celebrity}}</p>
-            <p>the detected face is  {{attributes.gender}}</p>
-            <p>and in age range {{attributes.low}} to {{attributes.high}}</p>
-            <p>well the person seems {{attributes.emotion}}</p>
-            <p>Eyeglass: {{attributes.eyeGlass}}</p>
-              <p>Beard: {{attributes.beard}}</p>
-          </div>
+         <div style="margin-left:-20%">
+            <h3>Celebrity:</h3>
+            <p>{{attributes.celebrity}}</p>
+            <h3>Gender:</h3>
+            <p>{{attributes.gender}}</p>
+            <h3>Age Range:</h3>
+            <p>From {{attributes.low}} to {{attributes.high}}</p>
+            <h3>Emotion: </h3>
+            <p>{{attributes.emotion}}</p>
+            <h3>Eyeglass: </h3>
+            <p>{{attributes.eyeGlass}}</p>
+         </div>
 
       </div>
 
@@ -39,4 +67,5 @@
 
 
 </body>
+
 </html>

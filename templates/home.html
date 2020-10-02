@@ -1,36 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="static/css/styles.min.css">
+    <!-- <link rel="stylesheet" href="static/css/styles.min.css"> -->
+    <!-- <link rel="stylesheet" href="stylesheets/home.css"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" /> -->
     <!-- **DO THIS**: -->
     <!--   Replace SDK_VERSION_NUMBER with the current SDK version number -->
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.765.0.min.js"></script>
 
 
 </head>
+<style>
+    body {
+
+        background-image: linear-gradient(to right, #007991, #78ffd6);
+        padding: 90px;
+    }
+
+    .text_title {
+        color: #e0f7fa;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+
+    }
+
+
+    .button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 45%;
+        margin-top: 5%;
+    }
+
+    .upload {
+        text-align: center;
+        margin-top: 10%;
+    }
+</style>
+
 <body>
-    <div class="main-content">
-           <div class="header">Welcome</div>
-           <div class="info">
-               <p>AWS Reckgnition</p>
-           </div>
-           <div class="content">
-           <h2>Upload Image for Analysis</h2>
-            <br>
-               <form method="post" enctype="multipart/form-data" action="analyze">
-                    <div>
-                        <label for="file">Choose file to upload</label>
-                        <input type="file" id="file" name="file">
-                    </div>
-                    <div>
-                        <p><input type="submit" value="Submit"></p>
-                    </div>
-                </form>
-       </div>
-        </body>
-          </html>
-   </div>
+
+    <div class="content">
+        <h2 class="text_title">AWS Rekognition </h2>
+        <h2 class="text_title">Upload Image for Analysis</h2>
+        <br>
+        <form method="post" enctype="multipart/form-data" action="analyze">
+            <div class="upload">
+                <label for="file">Choose file to upload</label>
+                <br><br>
+                <input type="file" id="file" name="file">
+            </div>
+            <div>
+                <input class="button" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+
+
+</html>
+</div>
+
 </html>
