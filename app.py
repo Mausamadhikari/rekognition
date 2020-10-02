@@ -87,6 +87,7 @@ def uploader():
         emotion = emotion.title()
         eyeGlass = rekogJson['Eyeglasses']['Value']
         beard = rekogJson['Beard']['Value']
+        smile = rekogJson['Smile']['Value']
 
         img_src = f"https://{bucketName}.s3.amazonaws.com/{fileName}"
 
@@ -98,7 +99,8 @@ def uploader():
             'emotion':emotion,
             'eyeGlass':eyeGlass,
             'celebrity':celebrity,
-            'beard':beard
+            'beard':beard,
+            'smile':smile
 
         }
 

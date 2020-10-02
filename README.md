@@ -3,6 +3,13 @@
 ### i have added whether the added picture is celebrity or not. if they are their name will be displayed else they are not celebrity will be displayed.
 There is one issue as image fetched from s3 bucket is not displayed.
 
+here i used 
+
+        Flask 
+        HTML/CSS
+        boto3
+        
+
 usage
 
          $git clone https://github.com/Mausamadhikari/rekognition.git 

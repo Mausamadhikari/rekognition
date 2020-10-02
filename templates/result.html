@@ -56,8 +56,29 @@
             <p>From {{attributes.low}} to {{attributes.high}}</p>
             <h3>Emotion: </h3>
             <p>{{attributes.emotion}}</p>
-            <h3>Eyeglass: </h3>
-            <p>{{attributes.eyeGlass}}</p>
+            <h3><p>
+            {% if attributes.smile %}
+            Person is smiling.
+            {% else %}
+            Person is not smiling.
+            {% endif %}
+            </p></h3>
+
+            <h3><p>
+            {% if attributes.beard %}
+            Person has Beard.
+            {% else %}
+            Person doesn't have beard.
+            {% endif %}
+            </p></h3>
+
+            <h3><p>
+            {% if attributes.eyeGlass %}
+            Person is wearing Glass.
+            {% else %}
+            Person is not wearing Glass.
+            {% endif %}
+            </p></h3>
          </div>
 
       </div>
