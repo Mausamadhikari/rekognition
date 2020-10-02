@@ -3,11 +3,11 @@
 ### i have added whether the added picture is celebrity or not. if they are their name will be displayed else they are not celebrity will be displayed.
 There is one issue as image fetched from s3 bucket is not displayed.
 
-usage -
-        --- git clone https://github.com/Mausamadhikari/rekognition.git
-        --- cd rekognition
-        --- create virtual environment 
-        --- python -m venv venv
-        --- source venv/bin/activate
-        --- pip install -r requirements.txt
+usage -\n
+        --- git clone https://github.com/Mausamadhikari/rekognition.git \n
+        --- cd rekognition \n
+        --- create virtual environment  \n
+        --- python -m venv venv \n
+        --- source venv/bin/activate \n
+        --- pip install -r requirements.txt \n
 things to consider you must have configured /.aws/credentials to run this
