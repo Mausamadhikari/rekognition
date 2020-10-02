@@ -22,7 +22,6 @@ things to consider you must have configured /.aws/credentials to run this
 
 <img src="https://github.com/Mausamadhikari/rekognition/blob/main/homee.png"/>
 
-3. Output Frontened
 
 <img src="https://github.com/Mausamadhikari/rekognition/blob/main/analyze.png"/>
 
