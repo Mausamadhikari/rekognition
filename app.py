@@ -40,6 +40,8 @@ def celebrityRecognition(bucketName, fileName):
         outputs = json.dumps(facedetails, indent=4, sort_keys=True)
     for facedetails in response['UnrecognizedFaces']:
         outputs = json.dumps(facedetails, indent=4, sort_keys=True)
+
+
     return outputs
 
 
@@ -60,15 +62,16 @@ def uploader():
 
         rekogDetails = informationDetails(bucketName, fileName)
         rekogJson = json.loads(rekogDetails)
+        print(rekogJson)
 
         celebDetails = celebrityRecognition(bucketName, fileName)
         celebJson = json.loads(celebDetails)
+
         print(celebJson)
-        if celebJson['Name'] == 'Jeff Bezos':
-            celebrity = celebJson['Name']
-
-
-        else:
+        try:
+            if celebJson['Name']:
+                celebrity = celebJson['Name']
+        except:
             celebrity = "The person in picture is not celebrity!!! "
 
 
@@ -83,6 +86,7 @@ def uploader():
         emotion = rekogJson['Emotions'][values.index(max(values))]['Type']
         emotion = emotion.title()
         eyeGlass = rekogJson['Eyeglasses']['Value']
+        beard = rekogJson['Beard']['Value']
 
         img_src = f"https://{bucketName}.s3.amazonaws.com/{fileName}"
 
@@ -93,7 +97,8 @@ def uploader():
             'low':low,
             'emotion':emotion,
             'eyeGlass':eyeGlass,
-            'celebrity':celebrity
+            'celebrity':celebrity,
+            'beard':beard
 
         }
 
