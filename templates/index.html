@@ -1,0 +1,22 @@
+{% extends "home.html" %}
+{% block content %}
+    <div style="margin-top: 20px">
+        <img src={{image_names}} alt='imagename' width="200px" height="200px">
+    </div>
+<!--    <br>-->
+<!--    Age Range is : {{Agerangelow}}  - {{Agerangehigh}} years old.</br>-->
+<!--    Gender is : {{Gender}}</br>-->
+<!--    Emotion is : {{Emotion}}</br>-->
+<!--    The person on photo is {{Eyeglasses}}.</br>-->
+<!--    The person on the photo {{beard}}.</br>-->
+<!--    {{smily}}.</br>-->
+<!--    </div>-->
+
+<div class="col-xs-5" id="Info_block">
+          <div id='info_infos'>
+            <p>Gender: {{gender}}</p>
+            <p>Age Range: From {{low}} to {{high}}</p>
+            <p>Emotion: {{emotion}}</p>
+            <p>Eyeglass: {{eyeglass}}</p>
+          </div>
+{% endblock %}

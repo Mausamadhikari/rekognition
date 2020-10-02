@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis</title>
+<html>
+<head>
+   <title>Face Analysis</title>
+   <meta charset="utf-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+   <div class="container" id=''>
+      <div class="row" id='title_info'>
+         <h1 id="text_title">Amazon Rekognition</h1>
+      </div>
+
+      <div >
+         <div>
+           <img id='photo_margin' width = "370" height="350"  src="{{attributes.image_names}}">
+         </div>
+
+
+          <div>
+              <p>Celebrity: {{attributes.celebrity}}</p>
+            <p>Gender: {{attributes.gender}}</p>
+            <p>Age Range: From {{attributes.low}} to {{attributes.high}}</p>
+            <p>Emotion: {{attributes.emotion}}</p>
+            <p>Eyeglass: {{attributes.eyeGlass}}</p>
+          </div>
+
+      </div>
+
+   </div>
+
+
+
+</body>
+</html>
